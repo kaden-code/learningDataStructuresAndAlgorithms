@@ -15,3 +15,4 @@ def binarySearch(list,target):
         ## if the target value is less than the midpoint we make last index midpoint - 1 for the mid point to be calculated again with a lesser last value 
         else:
             last = midpoint -1
+    return None
