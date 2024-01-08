@@ -1,3 +1,4 @@
+
 def binarySearch(list,target):
     first = 0 ## first index in list
     last = len(list) - 1 ## last index in list
@@ -16,3 +17,20 @@ def binarySearch(list,target):
         else:
             last = midpoint -1
     return None
+
+
+def verify(index):
+    if index != None:
+      print("Target value index:" , index)
+    else:
+      print("Target not found")
+
+numbers = [1,2,3,4,5,6,7,8,9,10]
+
+result = binarySearch(numbers,7)
+verify(result)
+
+
+result = binarySearch(numbers,12)
+verify(result)
+
