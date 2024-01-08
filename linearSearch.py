@@ -14,6 +14,11 @@ def verify(index):
 
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
-
+## search for number in list
 result = linearSearch(numbers,8)
+verify(result)
+
+
+## search for number not in list
+result = linearSearch(numbers,12)
 verify(result)
