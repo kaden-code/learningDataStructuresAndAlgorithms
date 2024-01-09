@@ -1,5 +1,5 @@
 def recursiveBinarySearch(list,target):
-    ## checks if list is empty if so returns item not found
+    ## checks if list is empty if so returns false 
     if len(list) == 0:
         return False
     else:
@@ -11,10 +11,10 @@ def recursiveBinarySearch(list,target):
         else:
             ## checks if the value at the midpoint is less than the target 
             if list[midpoint] < target:
-                ## if midpoint is less than the target calls function again with smaller list and starts at index one more than previous midpoint
+                ## if midpoint is less than the target calls function again with smaller list and starts at index one more than previous midpoint and returns the result of calling itself
                 return recursiveBinarySearch(list[midpoint + 1:], target)
             else:
-                ## if midpoint is greater than the target function calls it self with smaller list which ends at the midpoint 
+                ## if midpoint is greater than the target function calls it self with smaller list which ends at the midpoint and returns the result of calling itself
                 return recursiveBinarySearch(list[:midpoint],target)
             
 
