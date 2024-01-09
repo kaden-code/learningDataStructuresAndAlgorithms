@@ -6,7 +6,7 @@ def binarySearch(list,target):
     while first <= last:
         ## floor division to break list in half and round down to nearest whole number 
         midpoint = (first + last)//2
-        
+
         ## returns index if it is equal to target
         if list[midpoint] == target:
             return midpoint
