@@ -34,13 +34,32 @@ class linkedList:
             count += 1
             current = current.nextNode
         return count
-    def prepenf(self,data):
+    def prepend(self,data):
         """
         Adds new node containing data at the head of the list
-        Take O(1) time / constant time
+        Take O(1) / constant time
         """
         newNode = Node(data)
         newNode.nextNode = self.head
         self.head = newNode
+    def __repr__(self):
+        """
+        returns a sgring representation of the linked list
+        Takes O(n) / linear time
+        """
 
 
+
+        nodes = []
+        current = self.head
+
+        while current:
+            if current == self.head:
+                nodes.append("[Heads: %s]" %current.data)
+            elif current.nextNode == None:
+                 nodes.append("[Tail: %s]" % current.data)
+            else:
+                nodes.append("[%s]" %current.data)
+
+            current = current.nextNode
+        return "-> ".join(nodes)
