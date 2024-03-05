@@ -24,6 +24,9 @@ class linkedList:
         return self.head == None
     
     def size(self):
+        """
+        Returns number of node in the list 
+        """
         current = self.head
         count = 0
 
