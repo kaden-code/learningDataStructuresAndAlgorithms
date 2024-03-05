@@ -34,4 +34,13 @@ class linkedList:
             count += 1
             current = current.nextNode
         return count
+    def prepenf(self,data):
+        """
+        Adds new node containing data at the head of the list
+        Take O(1) time / constant time
+        """
+        newNode = Node(data)
+        newNode.nextNode = self.head
+        self.head = newNode
+
 
