@@ -34,6 +34,7 @@ class linkedList:
             count += 1
             current = current.nextNode
         return count
+
     def prepend(self,data):
         """
         Adds new node containing data at the head of the list
@@ -42,13 +43,28 @@ class linkedList:
         newNode = Node(data)
         newNode.nextNode = self.head
         self.head = newNode
+    
+    
+    def search(self,key):
+        """
+        Search for the first node containing data that matches the key 
+        Return the node or None if not found
+        Takes O(N)/linear time
+        """
+
+        current = self.head
+        while current:
+            if current.data == key:
+              return current
+            else:
+              current = current.nextNode
+        return None
+
     def __repr__(self):
         """
         returns a sgring representation of the linked list
         Takes O(n) / linear time
         """
-
-
 
         nodes = []
         current = self.head
