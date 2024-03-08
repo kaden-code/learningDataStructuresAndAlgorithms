@@ -59,6 +59,34 @@ class linkedList:
             else:
               current = current.nextNode
         return None
+    
+    def insert(self,data,index):
+        """
+        Inserts a new Node containing data at index position
+        Insertion takes O(1)/Constant time
+        Searching for node at insertion point takes O(n)/Linear time
+        Overall takes O(N)/Linear time
+        """
+        if index == 0:
+            self.add(data)
+            return
+        
+        if index > 0:
+            new = Node(data)
+            position = index
+            current = self.head
+
+            while position > 1:
+               current = current.nextNode
+               position -= 1
+            
+            prevNode = current
+            nextNode = current.nextNode
+
+            prevNode.nextNode = new
+            new.nextNode = nextNode
+
+
 
     def __repr__(self):
         """
